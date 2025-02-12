@@ -1,0 +1,23 @@
+{
+	"name": "play-with-k8s-operator",
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "play-with-k8s-operator",
+	"workspaceFolder": "/opt/golang-user/code",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"terminal.integrated.profiles.linux": {
+					"zsh": {
+						"path": "/bin/zsh"
+					}
+				},
+				"go.useLanguageServer": true
+			},
+			"extensions": [
+				"ms-vscode.go"
+			]
+		}
+	},
+	"remoteUser": "golang-user"
+}

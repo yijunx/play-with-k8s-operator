@@ -1,0 +1,19 @@
+networks:
+  # need to create before hand
+  # docker network create aiwrappify
+  # this is what external mean
+  playground:
+    external: true
+
+services:
+  play-with-k8s-operator:
+    build: 
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ~/.ssh:/opt/golang-user/.ssh
+      - ../.devcontainer/zshrc:/opt/golang-user/.zshrc
+      - ..:/opt/golang-user/code
+    command: ["tail -f /dev/null"]
+    networks:
+      - playground
